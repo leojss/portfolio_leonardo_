@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --color-ink-950: #040508;
+  --color-ink-900: #080a10;
+  --color-ink-850: #0c0f18;
+  --color-ink-800: #121622;
+  --color-ink-700: #1b2132;
+  --color-ink-600: #293147;
+  --color-ink-500: #414b66;
+  --color-ink-400: #6a7694;
+  --color-ink-300: #9aa5bf;
+  --color-ink-200: #cbd3e2;
+  --color-ink-100: #f1f4f9;
+
+  --color-cyber-cyan: #00f5ff;
+  --color-cyber-blue: #38bdf8;
+  --color-cyber-violet: #8b5cf6;
+  --color-cyber-emerald: #10b981;
+
+  --color-accent-500: #3b82f6;
+  --color-accent-400: #60a5fa;
+  --color-accent-300: #93c5fd;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-ink-950);
+  color: var(--color-ink-100);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: rgba(0, 245, 255, 0.3);
+  color: #00f5ff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #040508;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1b2132;
+  border-radius: 9999px;
+  border: 2px solid #040508;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00f5ff;
+}
+
+/* Futuristic Text Gradients */
+.text-gradient-chrome {
+  background: linear-gradient(135deg, #ffffff 20%, #cbd3e2 50%, #60a5fa 80%, #00f5ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-neon {
+  background: linear-gradient(135deg, #00f5ff 0%, #38bdf8 40%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Cyber Glows */
+.glow-cyan {
+  box-shadow: 0 0 25px -4px rgba(0, 245, 255, 0.35);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 25px -4px rgba(16, 185, 129, 0.35);
+}
+
+.glow-violet {
+  box-shadow: 0 0 25px -4px rgba(139, 92, 246, 0.35);
+}
+
+/* High-Tech Glass Panel */
+.glass-panel {
+  background: rgba(12, 15, 24, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(0, 245, 255, 0.4);
+  box-shadow: 0 0 30px -5px rgba(0, 245, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+/* Pulsing laser line animation for architecture pipelines */
+@keyframes laserFlow {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-laser {
+  stroke-dasharray: 6 6;
+  animation: laserFlow 1.8s linear infinite;
+}
+
+/* Radar pulse animation */
+@keyframes radarPing {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+}
+
+.animate-radar {
+  animation: radarPing 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
