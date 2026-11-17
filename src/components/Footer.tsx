@@ -1,5 +1,6 @@
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { Mail } from 'lucide-react'
 import { useMemo } from 'react'
+import { WhatsAppIcon } from '@/components/icons/WhatsAppIcon'
 
 export function Footer() {
   const year = useMemo(() => new Date().getFullYear(), [])
@@ -24,7 +25,7 @@ export function Footer() {
         {/* Action button */}
         <div className="mt-2 flex flex-wrap items-center justify-center gap-4">
           <a
-            href="mailto:leonardo.jss@gmail.com"
+            href="mailto:leonardo@vlsdata.com.br"
             className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-3.5 font-mono text-xs font-bold text-ink-950 transition-all duration-300 hover:from-cyan-400 hover:to-blue-500 hover:shadow-[0_0_25px_rgba(0,245,255,0.4)]"
           >
             <Mail className="h-4 w-4" aria-hidden="true" />
@@ -32,23 +33,13 @@ export function Footer() {
           </a>
 
           <a
-            href="https://github.com/leojss"
+            href="https://wa.me/5521965698317"
             target="_blank"
             rel="noreferrer"
-            aria-label="GitHub"
-            className="rounded-xl border border-ink-800 bg-ink-900/60 p-3.5 text-ink-300 transition-all hover:border-cyan-500/50 hover:text-cyan-300 hover:bg-cyan-950/20"
+            aria-label="WhatsApp"
+            className="rounded-xl border border-ink-800 bg-ink-900/60 p-3.5 text-[#25D366] transition-all hover:border-[#25D366]/60 hover:text-[#25D366] hover:bg-[#25D366]/10"
           >
-            <Github className="h-5 w-5" aria-hidden="true" />
-          </a>
-
-          <a
-            href="https://linkedin.com/in/leojss"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="LinkedIn"
-            className="rounded-xl border border-ink-800 bg-ink-900/60 p-3.5 text-ink-300 transition-all hover:border-cyan-500/50 hover:text-cyan-300 hover:bg-cyan-950/20"
-          >
-            <Linkedin className="h-5 w-5" aria-hidden="true" />
+            <WhatsAppIcon className="h-5 w-5" />
           </a>
         </div>
 

@@ -1,5 +1,6 @@
-import { Activity, Github, Linkedin, Terminal } from 'lucide-react'
+import { Activity, Terminal } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { WhatsAppIcon } from '@/components/icons/WhatsAppIcon'
 
 const navLinks = [
   { href: '#projetos', label: 'Projetos & Arquitetura' },
@@ -83,22 +84,13 @@ export function Header() {
 
           <div className="hidden sm:flex items-center gap-2 border-l border-ink-800 pl-4">
             <a
-              href="https://github.com/leojss"
+              href="https://wa.me/5521965698317"
               target="_blank"
               rel="noreferrer"
-              aria-label="GitHub"
-              className="rounded-lg border border-ink-700/60 p-1.5 text-ink-300 transition hover:border-cyan-500/50 hover:text-cyan-300 hover:bg-cyan-950/20"
+              aria-label="WhatsApp"
+              className="rounded-lg border border-ink-700/60 p-1.5 text-[#25D366] transition hover:border-[#25D366]/60 hover:bg-[#25D366]/10"
             >
-              <Github className="h-4 w-4" />
-            </a>
-            <a
-              href="https://linkedin.com/in/leojss"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-              className="rounded-lg border border-ink-700/60 p-1.5 text-ink-300 transition hover:border-cyan-500/50 hover:text-cyan-300 hover:bg-cyan-950/20"
-            >
-              <Linkedin className="h-4 w-4" />
+              <WhatsAppIcon className="h-4 w-4" />
             </a>
           </div>
         </div>

@@ -1,13 +1,6 @@
 import { motion } from 'framer-motion'
-import {
-  ArrowDown,
-  Cpu,
-  Database,
-  Github,
-  Linkedin,
-  Mail,
-  Zap,
-} from 'lucide-react'
+import { ArrowDown, Cpu, Database, Mail, Zap } from 'lucide-react'
+import { WhatsAppIcon } from '@/components/icons/WhatsAppIcon'
 
 export function Hero() {
   return (
@@ -82,29 +75,20 @@ export function Hero() {
 
           <div className="flex items-center gap-3 sm:ml-4">
             <a
-              href="https://github.com/leojss"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub"
-              className="rounded-xl border border-ink-800 bg-ink-900/60 p-3.5 text-ink-300 backdrop-blur-md transition-all hover:border-cyan-500/50 hover:text-cyan-300 hover:shadow-[0_0_15px_rgba(0,245,255,0.2)]"
-            >
-              <Github className="h-5 w-5" />
-            </a>
-            <a
-              href="https://linkedin.com/in/leojss"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-              className="rounded-xl border border-ink-800 bg-ink-900/60 p-3.5 text-ink-300 backdrop-blur-md transition-all hover:border-cyan-500/50 hover:text-cyan-300 hover:shadow-[0_0_15px_rgba(0,245,255,0.2)]"
-            >
-              <Linkedin className="h-5 w-5" />
-            </a>
-            <a
-              href="mailto:leonardo.jss@gmail.com"
+              href="mailto:leonardo@vlsdata.com.br"
               aria-label="E-mail"
               className="rounded-xl border border-ink-800 bg-ink-900/60 p-3.5 text-ink-300 backdrop-blur-md transition-all hover:border-cyan-500/50 hover:text-cyan-300 hover:shadow-[0_0_15px_rgba(0,245,255,0.2)]"
             >
               <Mail className="h-5 w-5" />
+            </a>
+            <a
+              href="https://wa.me/5521965698317"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="WhatsApp"
+              className="rounded-xl border border-ink-800 bg-ink-900/60 p-3.5 text-[#25D366] backdrop-blur-md transition-all hover:border-[#25D366]/60 hover:text-[#25D366] hover:shadow-[0_0_15px_rgba(37,211,102,0.35)]"
+            >
+              <WhatsAppIcon className="h-5 w-5" />
             </a>
           </div>
         </motion.div>
