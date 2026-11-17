@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight, X } from 'lucide-react'
 import { useEffect, useRef } from 'react'
+import { createPortal } from 'react-dom'
 import { ProjectImage } from '@/components/ProjectImage'
 import type { ProjectScreenshot } from '@/types/project'
 
@@ -35,7 +36,7 @@ export function ImageLightbox({ screenshots, index, onIndexChange, onClose }: Im
 
   if (!current) return null
 
-  return (
+  return createPortal(
     <AnimatePresence>
       <motion.div
         initial={{ opacity: 0 }}
@@ -104,6 +105,7 @@ export function ImageLightbox({ screenshots, index, onIndexChange, onClose }: Im
           </figcaption>
         </motion.figure>
       </motion.div>
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body,
   )
 }
